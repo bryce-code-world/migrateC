@@ -1,0 +1,56 @@
+# C盘大文件迁移工具配置文件
+
+# 扫描配置
+scan:
+  # 需要扫描的目录路径列表及其对应的扫描层级
+  scan_paths:
+    # - path: "C:\\Users\\%USERNAME%\\AppData"
+    #   max_depth: 2          # 该路径下查询的文件夹深度
+    #   exclude_folders: []   # 该路径下特定需要排除的文件夹名称列表
+    # - path: "C:\\Program Files"
+    #   max_depth: 1
+    #   exclude_folders: ["Common Files", "Microsoft", "WindowsApps"]
+    - path: "C:\\Users\\%USERNAME%\\AppData\\test"
+      max_depth: 1          # 该路径下查询的文件夹深度
+      exclude_folders: []   # 该路径下特定需要排除的文件夹名称列表
+  # 文件大小阈值（单位：字节，1GB = 1073741824字节）
+  size_threshold: 1073741824
+  # 全局排除的文件夹名称列表，这些文件夹将在所有路径下被跳过不进行迁移
+  exclude_folders: ["Windows", "System32", "ProgramData", "$Recycle.Bin", "Programs", "Microsoft"]
+  # 扫描结果输出文件路径
+  output_file: "./output/scan_results.json"
+
+# 迁移配置
+migration:
+  # 目标磁盘路径
+  target_path: "D:\\C_backup"
+  # 压缩文件临时存储路径
+  temp_path: "./temp"
+  # 映射文件输出路径
+  mapping_file: "./output/path_mapping.json"
+
+# 清理配置
+cleanup:
+  # 重试次数
+  retry_count: 3
+  # 重试间隔时间（秒）
+  retry_interval: 5
+
+# 链接配置
+link:
+  # 链接检查超时时间（秒）
+  check_timeout: 10
+
+# 日志配置
+logging:
+  # 日志文件路径
+  log_file: "./logs/migrate.log"
+  # 日志级别（DEBUG, INFO, WARNING, ERROR, CRITICAL）
+  log_level: "INFO"
+
+# 性能配置
+performance:
+  # 最大线程数（设置为0将表示最多使用 CPU 资源的 50%）
+  max_threads: 0
+  # 内存使用限制（单位：MB，设置为0表示最多使用内存资源的 50%）
+  memory_limit: 0

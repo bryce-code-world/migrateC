@@ -1,0 +1,35 @@
+{
+    "large_folders": [
+        {
+            "path": "C:\\Users\\bryce\\AppData\\test\\Docker",
+            "size": 22470813206,
+            "size_human": "20.93 GB",
+            "depth": 1,
+            "type": "folder"
+        },
+        {
+            "path": "C:\\Users\\bryce\\AppData\\test\\Docker - 副本",
+            "size": 22470813206,
+            "size_human": "20.93 GB",
+            "depth": 1,
+            "type": "folder"
+        }
+    ],
+    "large_files": [
+        {
+            "path": "C:\\Users\\bryce\\AppData\\test\\Docker - 副本.7z",
+            "size": 4175418929,
+            "size_human": "3.89 GB",
+            "depth": 0,
+            "type": "file"
+        },
+        {
+            "path": "C:\\Users\\bryce\\AppData\\test\\Docker.7z",
+            "size": 4175418929,
+            "size_human": "3.89 GB",
+            "depth": 0,
+            "type": "file"
+        }
+    ],
+    "scan_time": "2025-03-30 18:48:54"
+}

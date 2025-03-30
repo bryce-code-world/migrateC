@@ -1,0 +1,10 @@
+{
+    "migration_time": "2025-03-30 19:09:52",
+    "source_path_count": 4,
+    "path_mapping": {
+        "C:\\Users\\bryce\\AppData\\test\\Docker.7z": "D:\\C_backup\\Users\\bryce\\AppData\\test\\Docker.7z",
+        "C:\\Users\\bryce\\AppData\\test\\Docker - 副本.7z": "D:\\C_backup\\Users\\bryce\\AppData\\test\\Docker - 副本.7z",
+        "C:\\Users\\bryce\\AppData\\test\\Docker - 副本": "D:\\C_backup\\Users\\bryce\\AppData\\test\\Docker - 副本",
+        "C:\\Users\\bryce\\AppData\\test\\Docker": "D:\\C_backup\\Users\\bryce\\AppData\\test\\Docker"
+    }
+}
