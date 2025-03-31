@@ -304,10 +304,10 @@ class MainWindow(QMainWindow):
         control_panel.setMaximumWidth(200)
         
         # 添加按钮
-        self.scan_btn = QPushButton("扫描大文件")
-        self.migrate_btn = QPushButton("迁移大文件")
-        self.clean_btn = QPushButton("清理原文件")
-        self.link_btn = QPushButton("创建软链接")
+        self.scan_btn = QPushButton("1.扫描大文件")
+        self.migrate_btn = QPushButton("2.迁移大文件")
+        self.clean_btn = QPushButton("3.清理原文件")
+        self.link_btn = QPushButton("4.创建软链接")
         self.all_btn = QPushButton("执行所有步骤")
         self.stop_btn = QPushButton("停止当前任务")
         self.config_btn = QPushButton("修改配置")

@@ -1502,3 +1502,245 @@ Traceback (most recent call last):
     ^^^^^^^^^^^^
 AttributeError: 'Linker' object has no attribute '_update'
 2025-03-30 20:17:47,599 - MigrateC - INFO - 任务执行出错: 'Linker' object has no attribute '_update'
+2025-03-31 18:49:33,610 - MigrateC - INFO - C盘大文件迁移工具已启动
+2025-03-31 18:49:33,611 - MigrateC - INFO - 配置已加载，最大线程数: 48
+2025-03-31 18:49:40,917 - MigrateC - INFO - 开始创建软链接...
+2025-03-31 18:49:40,917 - MigrateC.Linker - INFO - 创建软链接需要管理员权限，请以管理员身份运行程序
+2025-03-31 18:49:40,917 - MigrateC - INFO - 创建软链接需要管理员权限，请以管理员身份运行程序
+2025-03-31 18:49:40,920 - MigrateC - INFO - 软链接创建失败，请查看日志获取详细信息
+2025-03-31 18:51:17,519 - MigrateC - INFO - C盘大文件迁移工具已启动
+2025-03-31 18:51:17,519 - MigrateC - INFO - 配置已加载，最大线程数: 48
+2025-03-31 18:51:19,661 - MigrateC - INFO - 开始创建软链接...
+2025-03-31 18:51:19,662 - MigrateC.Linker - INFO - 开始创建 4 个软链接
+2025-03-31 18:51:19,662 - MigrateC - INFO - 开始创建 4 个软链接
+2025-03-31 18:51:19,663 - MigrateC.Linker - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 18:51:19,665 - MigrateC - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 18:51:29,697 - MigrateC.Linker - INFO - 软链接创建失败，链接检查未通过: C:\Users\bryce\AppData\test\Docker.7z
+2025-03-31 18:51:29,697 - MigrateC - INFO - 软链接创建失败，链接检查未通过: C:\Users\bryce\AppData\test\Docker.7z
+2025-03-31 18:51:29,697 - MigrateC.Linker - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker - 副本.7z -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本.7z
+2025-03-31 18:51:29,703 - MigrateC - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker - 副本.7z -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本.7z
+2025-03-31 18:51:39,740 - MigrateC.Linker - INFO - 软链接创建失败，链接检查未通过: C:\Users\bryce\AppData\test\Docker - 副本.7z
+2025-03-31 18:51:39,740 - MigrateC - INFO - 软链接创建失败，链接检查未通过: C:\Users\bryce\AppData\test\Docker - 副本.7z
+2025-03-31 18:51:39,740 - MigrateC.Linker - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker - 副本 -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:51:39,742 - MigrateC - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker - 副本 -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:51:50,100 - MigrateC.Linker - INFO - 软链接创建失败，链接检查未通过: C:\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:51:50,100 - MigrateC - INFO - 软链接创建失败，链接检查未通过: C:\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:51:50,100 - MigrateC.Linker - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker -> D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 18:51:50,103 - MigrateC - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker -> D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 18:52:00,451 - MigrateC.Linker - INFO - 软链接创建失败，链接检查未通过: C:\Users\bryce\AppData\test\Docker
+2025-03-31 18:52:00,451 - MigrateC - INFO - 软链接创建失败，链接检查未通过: C:\Users\bryce\AppData\test\Docker
+2025-03-31 18:52:00,451 - MigrateC.Linker - INFO - 链接创建部分完成，4 个链接创建失败
+2025-03-31 18:52:00,455 - MigrateC.Linker - INFO - 创建失败: C:\Users\bryce\AppData\test\Docker.7z
+2025-03-31 18:52:00,455 - MigrateC - INFO - 链接创建部分完成，4 个链接创建失败
+2025-03-31 18:52:00,455 - MigrateC.Linker - INFO - 创建失败: C:\Users\bryce\AppData\test\Docker - 副本.7z
+2025-03-31 18:52:00,456 - MigrateC.Linker - INFO - 创建失败: C:\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:52:00,456 - MigrateC.Linker - INFO - 创建失败: C:\Users\bryce\AppData\test\Docker
+2025-03-31 18:52:00,457 - MigrateC - INFO - 创建失败: C:\Users\bryce\AppData\test\Docker.7z
+2025-03-31 18:52:00,457 - MigrateC - INFO - 创建失败: C:\Users\bryce\AppData\test\Docker - 副本.7z
+2025-03-31 18:52:00,458 - MigrateC - INFO - 创建失败: C:\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:52:00,458 - MigrateC - INFO - 创建失败: C:\Users\bryce\AppData\test\Docker
+2025-03-31 18:52:00,458 - MigrateC - INFO - 软链接创建失败，请查看日志获取详细信息
+2025-03-31 18:56:25,020 - MigrateC - INFO - C盘大文件迁移工具已启动
+2025-03-31 18:56:25,020 - MigrateC - INFO - 配置已加载，最大线程数: 48
+2025-03-31 18:56:27,619 - MigrateC - INFO - 开始创建软链接...
+2025-03-31 18:56:27,619 - MigrateC.Linker - INFO - 开始创建 4 个软链接
+2025-03-31 18:56:27,620 - MigrateC.Linker - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 18:56:27,620 - MigrateC.Linker - INFO - 执行命令: cmd /c mklink "C:\Users\bryce\AppData\test\Docker.7z" "D:\C_backup\Users\bryce\AppData\test\Docker.7z"
+2025-03-31 18:56:27,620 - MigrateC - INFO - 开始创建 4 个软链接
+2025-03-31 18:56:27,621 - MigrateC - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 18:56:27,655 - MigrateC.Linker - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 18:56:27,656 - MigrateC - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 18:56:27,656 - MigrateC.Linker - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker - 副本.7z -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本.7z
+2025-03-31 18:56:27,657 - MigrateC.Linker - INFO - 执行命令: cmd /c mklink "C:\Users\bryce\AppData\test\Docker - 副本.7z" "D:\C_backup\Users\bryce\AppData\test\Docker - 副本.7z"
+2025-03-31 18:56:27,658 - MigrateC - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker - 副本.7z -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本.7z
+2025-03-31 18:56:27,687 - MigrateC.Linker - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker - 副本.7z -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本.7z
+2025-03-31 18:56:27,688 - MigrateC - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker - 副本.7z -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本.7z
+2025-03-31 18:56:27,688 - MigrateC.Linker - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker - 副本 -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:56:27,689 - MigrateC.Linker - INFO - 执行命令: cmd /c mklink /D "C:\Users\bryce\AppData\test\Docker - 副本" "D:\C_backup\Users\bryce\AppData\test\Docker - 副本"
+2025-03-31 18:56:27,690 - MigrateC - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker - 副本 -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:56:38,063 - MigrateC.Linker - INFO - 软链接创建失败，链接检查未通过: C:\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:56:38,063 - MigrateC - INFO - 软链接创建失败，链接检查未通过: C:\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:56:38,064 - MigrateC.Linker - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker -> D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 18:56:38,066 - MigrateC.Linker - INFO - 执行命令: cmd /c mklink /D "C:\Users\bryce\AppData\test\Docker" "D:\C_backup\Users\bryce\AppData\test\Docker"
+2025-03-31 18:56:38,068 - MigrateC - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker -> D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 18:56:48,450 - MigrateC.Linker - INFO - 软链接创建失败，链接检查未通过: C:\Users\bryce\AppData\test\Docker
+2025-03-31 18:56:48,450 - MigrateC - INFO - 软链接创建失败，链接检查未通过: C:\Users\bryce\AppData\test\Docker
+2025-03-31 18:56:48,450 - MigrateC.Linker - INFO - 链接创建部分完成，2 个链接创建失败
+2025-03-31 18:56:48,452 - MigrateC.Linker - INFO - 创建失败: C:\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:56:48,452 - MigrateC - INFO - 链接创建部分完成，2 个链接创建失败
+2025-03-31 18:56:48,452 - MigrateC.Linker - INFO - 创建失败: C:\Users\bryce\AppData\test\Docker
+2025-03-31 18:56:48,454 - MigrateC - INFO - 创建失败: C:\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:56:48,454 - MigrateC - INFO - 创建失败: C:\Users\bryce\AppData\test\Docker
+2025-03-31 18:56:48,455 - MigrateC - INFO - 软链接创建失败，请查看日志获取详细信息
+2025-03-31 18:59:06,043 - MigrateC - INFO - C盘大文件迁移工具已启动
+2025-03-31 18:59:06,043 - MigrateC - INFO - 配置已加载，最大线程数: 48
+2025-03-31 18:59:52,796 - MigrateC - INFO - 开始创建软链接...
+2025-03-31 18:59:52,796 - MigrateC.Linker - INFO - 开始创建 4 个软链接
+2025-03-31 18:59:52,796 - MigrateC - INFO - 开始创建 4 个软链接
+2025-03-31 18:59:52,797 - MigrateC.Linker - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 18:59:52,798 - MigrateC.Linker - INFO - 执行命令: cmd /c mklink "C:\Users\bryce\AppData\test\Docker.7z" "D:\C_backup\Users\bryce\AppData\test\Docker.7z"
+2025-03-31 18:59:52,799 - MigrateC - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 18:59:52,820 - MigrateC.Linker - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 18:59:52,820 - MigrateC - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 18:59:52,820 - MigrateC.Linker - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker - 副本.7z -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本.7z
+2025-03-31 18:59:52,821 - MigrateC.Linker - INFO - 执行命令: cmd /c mklink "C:\Users\bryce\AppData\test\Docker - 副本.7z" "D:\C_backup\Users\bryce\AppData\test\Docker - 副本.7z"
+2025-03-31 18:59:52,822 - MigrateC - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker - 副本.7z -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本.7z
+2025-03-31 18:59:52,843 - MigrateC.Linker - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker - 副本.7z -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本.7z
+2025-03-31 18:59:52,843 - MigrateC - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker - 副本.7z -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本.7z
+2025-03-31 18:59:52,844 - MigrateC.Linker - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker - 副本 -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:59:52,844 - MigrateC.Linker - INFO - 执行命令: cmd /c mklink /D "C:\Users\bryce\AppData\test\Docker - 副本" "D:\C_backup\Users\bryce\AppData\test\Docker - 副本"
+2025-03-31 18:59:52,845 - MigrateC - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker - 副本 -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:59:52,869 - MigrateC.Linker - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker - 副本 -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:59:52,870 - MigrateC - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker - 副本 -> D:\C_backup\Users\bryce\AppData\test\Docker - 副本
+2025-03-31 18:59:52,870 - MigrateC.Linker - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker -> D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 18:59:52,870 - MigrateC.Linker - INFO - 执行命令: cmd /c mklink /D "C:\Users\bryce\AppData\test\Docker" "D:\C_backup\Users\bryce\AppData\test\Docker"
+2025-03-31 18:59:52,871 - MigrateC - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker -> D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 18:59:52,885 - MigrateC.Linker - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker -> D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 18:59:52,886 - MigrateC - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker -> D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 18:59:52,886 - MigrateC.Linker - INFO - 链接创建完成，所有链接已成功创建
+2025-03-31 18:59:52,887 - MigrateC - INFO - 链接创建完成，所有链接已成功创建
+2025-03-31 18:59:52,897 - MigrateC - INFO - 软链接创建完成
+2025-03-31 19:00:46,839 - MigrateC - INFO - C盘大文件迁移工具已启动
+2025-03-31 19:00:46,839 - MigrateC - INFO - 配置已加载，最大线程数: 48
+2025-03-31 19:00:53,484 - MigrateC - INFO - ===== 步骤1: 扫描大文件夹 =====
+2025-03-31 19:00:53,485 - MigrateC - INFO - 开始扫描大文件夹...
+2025-03-31 19:00:53,485 - MigrateC.Scanner - INFO - 正在计算总文件夹数...
+2025-03-31 19:00:53,487 - MigrateC - INFO - 正在计算总文件夹数...
+2025-03-31 19:00:53,488 - MigrateC.Scanner - INFO - 总文件夹数: 5
+2025-03-31 19:00:53,488 - MigrateC.Scanner - INFO - 扫描目录: C:\Users\bryce\AppData\test，最大深度: 1，应用的排除规则 - 全局: ['Windows', 'System32', 'ProgramData', '$Recycle.Bin', 'Programs', 'Microsoft']，路径特定: []，合并后的排除列表: ['Windows', 'System32', 'ProgramData', '$Recycle.Bin', 'Programs', 'Microsoft']
+2025-03-31 19:00:53,489 - MigrateC.Scanner - INFO - 找到大文件: C:\Users\bryce\AppData\test\Docker.7z (3.89 GB)
+2025-03-31 19:00:53,491 - MigrateC - INFO - 总文件夹数: 5
+2025-03-31 19:00:53,493 - MigrateC - INFO - 扫描目录: C:\Users\bryce\AppData\test，最大深度: 1，应用的排除规则 - 全局: ['Windows', 'System32', 'ProgramData', '$Recycle.Bin', 'Programs', 'Microsoft']，路径特定: []，合并后的排除列表: ['Windows', 'System32', 'ProgramData', '$Recycle.Bin', 'Programs', 'Microsoft']
+2025-03-31 19:00:53,493 - MigrateC - INFO - 找到大文件: C:\Users\bryce\AppData\test\Docker.7z (3.89 GB)
+2025-03-31 19:00:53,502 - MigrateC.Scanner - INFO - 找到大文件夹: C:\Users\bryce\AppData\test\Docker (20.93 GB)
+2025-03-31 19:00:53,503 - MigrateC.Scanner - INFO - 扫描结果已保存到: D:\develop\python\migrateC\output\scan_results.json，大文件夹数量: 1，大文件数量: 1，总数量: 2
+2025-03-31 19:00:53,504 - MigrateC.Scanner - INFO - 扫描完成，共找到 1 个大文件夹和 1 个大文件
+2025-03-31 19:00:53,504 - MigrateC.Scanner - INFO - 扫描完成，共找到 1 个大文件夹
+2025-03-31 19:00:53,511 - MigrateC - INFO - 找到大文件夹: C:\Users\bryce\AppData\test\Docker (20.93 GB)
+2025-03-31 19:00:53,511 - MigrateC.ResourceMonitor - INFO - 资源监控已启动，CPU限制: 50%，内存限制: 50%
+2025-03-31 19:00:53,525 - MigrateC - INFO - 扫描完成，共找到 1 个大文件夹和 1 个大文件
+2025-03-31 19:00:53,525 - MigrateC.Migrator - INFO - [资源监控] 资源监控已启动，CPU限制: 50%，内存限制: 50%
+2025-03-31 19:00:53,525 - MigrateC - INFO - 扫描完成，共找到 1 个大文件夹
+2025-03-31 19:00:53,525 - MigrateC.Migrator - INFO - [初始化] 已创建必要的目录
+2025-03-31 19:00:53,526 - MigrateC.Migrator - INFO - [初始化] 正在加载扫描结果: D:\develop\python\migrateC\output\scan_results.json
+2025-03-31 19:00:53,527 - MigrateC.Migrator - INFO - [数据加载] 扫描结果加载成功
+2025-03-31 19:00:53,528 - MigrateC.Migrator - INFO - [任务开始] 开始迁移 1 个大文件夹和 1 个大文件，总计 2 项
+2025-03-31 19:00:53,528 - MigrateC.Migrator - INFO - [任务配置] 根据系统资源限制，使用 12 个线程进行迁移（最大允许: 48）
+2025-03-31 19:00:53,528 - MigrateC - INFO - 扫描完成，结果已保存到 D:\develop\python\migrateC\output\scan_results.json
+2025-03-31 19:00:53,528 - MigrateC.Migrator - INFO - [文件夹迁移] 开始迁移 1 个大文件夹
+2025-03-31 19:00:53,529 - MigrateC.Migrator - INFO - [文件迁移] 开始迁移 1 个大文件
+2025-03-31 19:00:53,529 - MigrateC.Migrator - INFO - [文件夹压缩] 开始压缩文件夹: Docker (C:\Users\bryce\AppData\test\Docker)
+2025-03-31 19:00:53,530 - MigrateC.Migrator - INFO - [文件夹扫描] 开始统计: Docker 中的文件数量和大小...
+2025-03-31 19:00:53,530 - MigrateC.Migrator - INFO - [文件复制] 开始复制: Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z，大小: 3.89 GB
+2025-03-31 19:00:53,530 - MigrateC.Migrator - INFO - [文件夹扫描] Docker: 已扫描 1 个目录，找到 0 个文件，总大小 0 B
+2025-03-31 19:00:53,535 - MigrateC.Migrator - INFO - [文件复制进度] Docker.7z: 1.00 MB/3.89 GB (0%)，速度: 200.01 MB/秒，剩余: 19.9秒
+2025-03-31 19:00:53,547 - MigrateC.Migrator - INFO - [文件夹压缩] 开始压缩: Docker，共 218 个文件，总大小 20.93 GB
+2025-03-31 19:00:53,563 - MigrateC.Migrator - INFO - [文件压缩] 正在压缩: backend.lock (1/218)，大小: 0 B
+2025-03-31 19:00:53,564 - MigrateC.Migrator - INFO - [文件夹压缩进度] Docker: 1/218 文件 (0%)，已处理 0 B/20.93 GB
+2025-03-31 19:00:53,567 - MigrateC - INFO - 
+===== 步骤2: 迁移文件夹 =====
+2025-03-31 19:00:53,568 - MigrateC - INFO - 开始迁移文件夹...
+2025-03-31 19:00:53,570 - MigrateC - INFO - [资源监控] 资源监控已启动，CPU限制: 50%，内存限制: 50%
+2025-03-31 19:00:53,571 - MigrateC - INFO - [初始化] 已创建必要的目录
+2025-03-31 19:00:53,571 - MigrateC - INFO - [初始化] 正在加载扫描结果: D:\develop\python\migrateC\output\scan_results.json
+2025-03-31 19:00:53,571 - MigrateC - INFO - [数据加载] 扫描结果加载成功
+2025-03-31 19:00:53,572 - MigrateC - INFO - [任务开始] 开始迁移 1 个大文件夹和 1 个大文件，总计 2 项
+2025-03-31 19:00:53,586 - MigrateC - INFO - [任务配置] 根据系统资源限制，使用 12 个线程进行迁移（最大允许: 48）
+2025-03-31 19:00:53,586 - MigrateC - INFO - [文件夹迁移] 开始迁移 1 个大文件夹
+2025-03-31 19:00:53,587 - MigrateC - INFO - [文件迁移] 开始迁移 1 个大文件
+2025-03-31 19:00:53,587 - MigrateC - INFO - [文件夹压缩] 开始压缩文件夹: Docker (C:\Users\bryce\AppData\test\Docker)
+2025-03-31 19:00:53,587 - MigrateC - INFO - [文件夹扫描] 开始统计: Docker 中的文件数量和大小...
+2025-03-31 19:00:53,588 - MigrateC - INFO - [文件复制] 开始复制: Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z，大小: 3.89 GB
+2025-03-31 19:00:53,588 - MigrateC - INFO - [文件夹扫描] Docker: 已扫描 1 个目录，找到 0 个文件，总大小 0 B
+2025-03-31 19:00:53,589 - MigrateC - INFO - [文件复制进度] Docker.7z: 1.00 MB/3.89 GB (0%)，速度: 200.01 MB/秒，剩余: 19.9秒
+2025-03-31 19:00:53,590 - MigrateC - INFO - [文件夹压缩] 开始压缩: Docker，共 218 个文件，总大小 20.93 GB
+2025-03-31 19:00:53,590 - MigrateC - INFO - [文件压缩] 正在压缩: backend.lock (1/218)，大小: 0 B
+2025-03-31 19:00:53,591 - MigrateC - INFO - [文件夹压缩进度] Docker: 1/218 文件 (0%)，已处理 0 B/20.93 GB
+2025-03-31 19:00:53,865 - MigrateC.Migrator - INFO - [文件夹压缩进度] Docker: 150/218 文件 (0%)，已处理 24.10 MB/20.93 GB，速度: 71.93 MB/秒，剩余: 5.0分钟
+2025-03-31 19:00:53,866 - MigrateC - INFO - [文件夹压缩进度] Docker: 150/218 文件 (0%)，已处理 24.10 MB/20.93 GB，速度: 71.93 MB/秒，剩余: 5.0分钟
+2025-03-31 19:00:54,065 - MigrateC.Migrator - INFO - [文件压缩] 正在压缩: sntpc.log.3 (186/218)，大小: 1023.92 KB
+2025-03-31 19:00:54,065 - MigrateC - INFO - [文件压缩] 正在压缩: sntpc.log.3 (186/218)，大小: 1023.92 KB
+2025-03-31 19:00:54,174 - MigrateC.Migrator - INFO - [文件夹压缩进度] Docker: 195/218 文件 (0%)，已处理 46.64 MB/20.93 GB，速度: 72.36 MB/秒，剩余: 4.9分钟
+2025-03-31 19:00:54,175 - MigrateC - INFO - [文件夹压缩进度] Docker: 195/218 文件 (0%)，已处理 46.64 MB/20.93 GB，速度: 72.36 MB/秒，剩余: 4.9分钟
+2025-03-31 19:00:54,536 - MigrateC.Migrator - INFO - [文件复制进度] Docker.7z: 2.11 GB/3.89 GB (54%)，速度: 2.09 GB/秒，剩余: 0.9秒
+2025-03-31 19:00:54,537 - MigrateC - INFO - [文件复制进度] Docker.7z: 2.11 GB/3.89 GB (54%)，速度: 2.09 GB/秒，剩余: 0.9秒
+2025-03-31 19:00:55,538 - MigrateC.Migrator - INFO - [文件复制进度] Docker.7z: 2.71 GB/3.89 GB (69%)，速度: 1.35 GB/秒，剩余: 0.9秒
+2025-03-31 19:00:55,538 - MigrateC - INFO - [文件复制进度] Docker.7z: 2.71 GB/3.89 GB (69%)，速度: 1.35 GB/秒，剩余: 0.9秒
+2025-03-31 19:00:56,419 - MigrateC.Migrator - INFO - [文件复制进度] Docker.7z: 3.89 GB/3.89 GB (100%)，速度: 1.35 GB/秒，剩余: 0.0秒
+2025-03-31 19:00:56,419 - MigrateC - INFO - [文件复制进度] Docker.7z: 3.89 GB/3.89 GB (100%)，速度: 1.35 GB/秒，剩余: 0.0秒
+2025-03-31 19:00:56,420 - MigrateC.Migrator - INFO - [文件复制完成] Docker.7z 复制完成，大小: 3.89 GB，耗时: 2.9秒
+2025-03-31 19:00:56,422 - MigrateC - INFO - [文件复制完成] Docker.7z 复制完成，大小: 3.89 GB，耗时: 2.9秒
+2025-03-31 19:00:56,422 - MigrateC.Migrator - INFO - [文件复制] 复制完成: Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 19:00:56,424 - MigrateC - INFO - [文件复制] 复制完成: Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 19:08:05,598 - MigrateC.Migrator - INFO - [文件夹压缩进度] Docker: 217/218 文件 (99%)，已处理 20.81 GB/20.93 GB，速度: 49.33 MB/秒，剩余: 2.4秒
+2025-03-31 19:08:05,599 - MigrateC - INFO - [文件夹压缩进度] Docker: 217/218 文件 (99%)，已处理 20.81 GB/20.93 GB，速度: 49.33 MB/秒，剩余: 2.4秒
+2025-03-31 19:08:05,599 - MigrateC.Migrator - INFO - [文件压缩] 正在压缩: ext4.vhdx (218/218)，大小: 116.00 MB
+2025-03-31 19:08:05,602 - MigrateC - INFO - [文件压缩] 正在压缩: ext4.vhdx (218/218)，大小: 116.00 MB
+2025-03-31 19:08:07,778 - MigrateC.Migrator - INFO - [文件夹压缩进度] Docker: 218/218 文件 (100%)，已处理 20.93 GB/20.93 GB，速度: 49.35 MB/秒，剩余: 0.0秒
+2025-03-31 19:08:07,779 - MigrateC - INFO - [文件夹压缩进度] Docker: 218/218 文件 (100%)，已处理 20.93 GB/20.93 GB，速度: 49.35 MB/秒，剩余: 0.0秒
+2025-03-31 19:08:07,779 - MigrateC.Migrator - INFO - [文件夹压缩完成] Docker 压缩完成: 218/218 文件，大小 20.93 GB，耗时: 7.2分钟
+2025-03-31 19:08:07,781 - MigrateC - INFO - [文件夹压缩完成] Docker 压缩完成: 218/218 文件，大小 20.93 GB，耗时: 7.2分钟
+2025-03-31 19:08:07,782 - MigrateC.Migrator - INFO - [文件夹解压] 开始解压文件夹: Docker 到 D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 19:08:07,782 - MigrateC - INFO - [文件夹解压] 开始解压文件夹: Docker 到 D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 19:08:07,785 - MigrateC.Migrator - INFO - [文件解压] 开始解压: Docker.zip，共 218 个文件，总大小 20.93 GB
+2025-03-31 19:08:07,785 - MigrateC - INFO - [文件解压] 开始解压: Docker.zip，共 218 个文件，总大小 20.93 GB
+2025-03-31 19:08:07,785 - MigrateC.Migrator - INFO - [文件解压] 正在解压: Docker/backend.lock (1/218)，大小: 0 B
+2025-03-31 19:08:07,785 - MigrateC - INFO - [文件解压] 正在解压: Docker/backend.lock (1/218)，大小: 0 B
+2025-03-31 19:08:07,786 - MigrateC.Migrator - INFO - [文件解压进度] Docker.zip: 1/218 文件 (0%)，已处理 0 B/20.93 GB
+2025-03-31 19:08:07,786 - MigrateC - INFO - [文件解压进度] Docker.zip: 1/218 文件 (0%)，已处理 0 B/20.93 GB
+2025-03-31 19:09:06,849 - MigrateC.Migrator - INFO - [文件解压进度] Docker.zip: 217/218 文件 (99%)，已处理 20.81 GB/20.93 GB，速度: 360.86 MB/秒，剩余: 0.3秒
+2025-03-31 19:09:06,850 - MigrateC - INFO - [文件解压进度] Docker.zip: 217/218 文件 (99%)，已处理 20.81 GB/20.93 GB，速度: 360.86 MB/秒，剩余: 0.3秒
+2025-03-31 19:09:06,850 - MigrateC.Migrator - INFO - [文件解压] 正在解压: Docker/wsl/distro/ext4.vhdx (218/218)，大小: 116.00 MB
+2025-03-31 19:09:06,853 - MigrateC - INFO - [文件解压] 正在解压: Docker/wsl/distro/ext4.vhdx (218/218)，大小: 116.00 MB
+2025-03-31 19:09:07,135 - MigrateC.Migrator - INFO - [文件解压进度] Docker.zip: 218/218 文件 (100%)，已处理 20.93 GB/20.93 GB，速度: 361.07 MB/秒，剩余: 0.0秒
+2025-03-31 19:09:07,136 - MigrateC - INFO - [文件解压进度] Docker.zip: 218/218 文件 (100%)，已处理 20.93 GB/20.93 GB，速度: 361.07 MB/秒，剩余: 0.0秒
+2025-03-31 19:09:07,136 - MigrateC.Migrator - INFO - [文件解压完成] Docker.zip 解压完成: 218/218 文件，大小 20.93 GB，耗时: 59.4秒
+2025-03-31 19:09:07,139 - MigrateC - INFO - [文件解压完成] Docker.zip 解压完成: 218/218 文件，大小 20.93 GB，耗时: 59.4秒
+2025-03-31 19:09:07,317 - MigrateC.Migrator - INFO - [清理临时文件] 已删除临时压缩文件: D:\develop\python\migrateC\temp\Docker.zip
+2025-03-31 19:09:07,318 - MigrateC - INFO - [清理临时文件] 已删除临时压缩文件: D:\develop\python\migrateC\temp\Docker.zip
+2025-03-31 19:09:07,318 - MigrateC.Migrator - INFO - [文件夹迁移] 文件夹迁移完成: Docker (C:\Users\bryce\AppData\test\Docker) -> D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 19:09:07,320 - MigrateC - INFO - [文件夹迁移] 文件夹迁移完成: Docker (C:\Users\bryce\AppData\test\Docker) -> D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 19:09:07,320 - MigrateC.Migrator - INFO - [数据保存] 正在保存路径映射到: D:\develop\python\migrateC\output\path_mapping.json
+2025-03-31 19:09:07,321 - MigrateC - INFO - [数据保存] 正在保存路径映射到: D:\develop\python\migrateC\output\path_mapping.json
+2025-03-31 19:09:07,321 - MigrateC.Migrator - INFO - [数据保存] 映射已保存: 2 个路径映射
+2025-03-31 19:09:07,321 - MigrateC - INFO - [数据保存] 映射已保存: 2 个路径映射
+2025-03-31 19:09:07,321 - MigrateC.Migrator - INFO - [任务完成] 迁移完成，共迁移 2 个项目
+2025-03-31 19:09:07,322 - MigrateC - INFO - [任务完成] 迁移完成，共迁移 2 个项目
+2025-03-31 19:09:07,690 - MigrateC.ResourceMonitor - INFO - 资源监控已停止
+2025-03-31 19:09:07,691 - MigrateC - INFO - 迁移完成，映射已保存到 D:\develop\python\migrateC\output\path_mapping.json
+2025-03-31 19:09:07,691 - MigrateC.Cleaner - INFO - 开始清理 2 个项目
+2025-03-31 19:09:07,693 - MigrateC.Cleaner - INFO - 正在删除文件: C:\Users\bryce\AppData\test\Docker.7z
+2025-03-31 19:09:07,695 - MigrateC.Cleaner - INFO - 文件删除成功: C:\Users\bryce\AppData\test\Docker.7z
+2025-03-31 19:09:07,695 - MigrateC.Cleaner - INFO - 正在删除文件夹: C:\Users\bryce\AppData\test\Docker
+2025-03-31 19:09:07,698 - MigrateC - INFO - 
+===== 步骤3: 清理原文件夹 =====
+2025-03-31 19:09:07,699 - MigrateC - INFO - 开始清理原文件夹...
+2025-03-31 19:09:07,699 - MigrateC - INFO - 开始清理 2 个项目
+2025-03-31 19:09:07,700 - MigrateC - INFO - 正在删除文件: C:\Users\bryce\AppData\test\Docker.7z
+2025-03-31 19:09:07,700 - MigrateC - INFO - 文件删除成功: C:\Users\bryce\AppData\test\Docker.7z
+2025-03-31 19:09:07,700 - MigrateC - INFO - 正在删除文件夹: C:\Users\bryce\AppData\test\Docker
+2025-03-31 19:09:07,729 - MigrateC.Cleaner - INFO - 文件夹删除成功: C:\Users\bryce\AppData\test\Docker
+2025-03-31 19:09:07,730 - MigrateC - INFO - 文件夹删除成功: C:\Users\bryce\AppData\test\Docker
+2025-03-31 19:09:07,730 - MigrateC.Cleaner - INFO - 清理完成，所有文件和文件夹已成功删除
+2025-03-31 19:09:07,731 - MigrateC.Linker - INFO - 开始创建 2 个软链接
+2025-03-31 19:09:07,731 - MigrateC.Linker - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 19:09:07,732 - MigrateC.Linker - INFO - 执行命令: cmd /c mklink "C:\Users\bryce\AppData\test\Docker.7z" "D:\C_backup\Users\bryce\AppData\test\Docker.7z"
+2025-03-31 19:09:07,733 - MigrateC - INFO - 清理完成，所有文件和文件夹已成功删除
+2025-03-31 19:09:07,733 - MigrateC - INFO - 清理完成
+2025-03-31 19:09:07,739 - MigrateC - INFO - 
+===== 步骤4: 创建软链接 =====
+2025-03-31 19:09:07,745 - MigrateC - INFO - 开始创建软链接...
+2025-03-31 19:09:07,745 - MigrateC - INFO - 开始创建 2 个软链接
+2025-03-31 19:09:07,746 - MigrateC - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 19:09:07,756 - MigrateC.Linker - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 19:09:07,756 - MigrateC - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker.7z -> D:\C_backup\Users\bryce\AppData\test\Docker.7z
+2025-03-31 19:09:07,756 - MigrateC.Linker - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker -> D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 19:09:07,757 - MigrateC.Linker - INFO - 执行命令: cmd /c mklink /D "C:\Users\bryce\AppData\test\Docker" "D:\C_backup\Users\bryce\AppData\test\Docker"
+2025-03-31 19:09:07,757 - MigrateC - INFO - 正在创建软链接: C:\Users\bryce\AppData\test\Docker -> D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 19:09:07,777 - MigrateC.Linker - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker -> D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 19:09:07,778 - MigrateC - INFO - 软链接创建成功: C:\Users\bryce\AppData\test\Docker -> D:\C_backup\Users\bryce\AppData\test\Docker
+2025-03-31 19:09:07,778 - MigrateC.Linker - INFO - 链接创建完成，所有链接已成功创建
+2025-03-31 19:09:07,779 - MigrateC - INFO - 链接创建完成，所有链接已成功创建
+2025-03-31 19:09:07,779 - MigrateC - INFO - 软链接创建完成
+2025-03-31 19:09:07,784 - MigrateC - INFO - 
+所有任务执行完成！

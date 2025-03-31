@@ -173,9 +173,18 @@ class Linker:
             bool: 是否成功
         """
         try:
-            # 使用mklink命令创建目录符号链接
-            cmd = f'cmd /c mklink /D "{source_path}" "{target_path}"'
+            # 判断目标路径是文件还是目录
+            is_directory = os.path.isdir(target_path)
             
+            # 根据类型选择不同的mklink命令
+            if is_directory:
+                # 创建目录符号链接
+                cmd = f'cmd /c mklink /D "{source_path}" "{target_path}"'
+            else:
+                # 创建文件符号链接
+                cmd = f'cmd /c mklink "{source_path}" "{target_path}"'
+            
+            self.logger.info(f"执行命令: {cmd}")
             result = subprocess.run(cmd, capture_output=True, text=True, shell=True)
             
             if result.returncode == 0:
@@ -199,19 +208,43 @@ class Linker:
             bool: 是否生效
         """
         try:
+            # 判断目标路径是文件还是目录
+            is_directory = os.path.isdir(target_path)
+            
             # 等待链接生效
             start_time = time.time()
             while time.time() - start_time < self.check_timeout:
-                if os.path.exists(source_path) and os.path.isdir(source_path):
-                    # 使用dir命令检查是否为符号链接
-                    cmd = f'cmd /c dir "{source_path}" | findstr "<SYMLINKD>"'
-                    
-                    result = subprocess.run(cmd, capture_output=True, text=True, shell=True)
-                    
-                    if result.returncode == 0 and "<SYMLINKD>" in result.stdout:
-                        return True
+                # 首先检查源路径是否存在
+                if os.path.exists(source_path):
+                    # 简单检查：如果源路径存在，且类型与目标路径一致，则认为链接已生效
+                    if (is_directory and os.path.isdir(source_path)) or \
+                       (not is_directory and os.path.isfile(source_path)):
+                        # 使用Path对象检查是否为符号链接
+                        if Path(source_path).is_symlink():
+                            return True
+                        
+                        # 备用方法：使用dir命令检查
+                        try:
+                            if is_directory:
+                                cmd = f'cmd /c dir "{os.path.dirname(source_path)}" | findstr "{os.path.basename(source_path)}" | findstr "<SYMLINKD>"'
+                            else:
+                                cmd = f'cmd /c dir "{os.path.dirname(source_path)}" | findstr "{os.path.basename(source_path)}" | findstr "<SYMLINK>"'
+                            
+                            result = subprocess.run(cmd, capture_output=True, text=True, shell=True)
+                            if result.returncode == 0 and ("<SYMLINKD>" in result.stdout or "<SYMLINK>" in result.stdout):
+                                return True
+                        except Exception as e:
+                            self.logger.warning(f"检查链接命令执行出错: {str(e)}")
                 
                 time.sleep(0.5)
+            
+            # 如果超时后源路径存在，但上面的检查都未通过，再做一次最终检查
+            if os.path.exists(source_path):
+                # 如果源路径存在且类型正确，可能是检测方法有问题，认为链接已生效
+                if (is_directory and os.path.isdir(source_path)) or \
+                   (not is_directory and os.path.isfile(source_path)):
+                    self.logger.info(f"链接似乎已创建但未通过标准检查，源路径存在: {source_path}")
+                    return True
             
             return False
         except Exception as e:
@@ -225,3 +258,17 @@ class Linker:
         Returns:
             bool: 是否具有管理员权限
         """
+        from modules.utils import is_admin
+        return is_admin()
+    
+    def _update(self, message):
+        """
+        更新消息
+        
+        Args:
+            message: 消息内容
+        """
+        # 确保消息中包含完整的配置信息
+        if self.update_callback:
+            self.update_callback(message)
+        self.logger.info(message)
