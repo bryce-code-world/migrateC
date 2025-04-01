@@ -1,8 +1,0 @@
-{
-    "migration_time": "2025-03-31 19:09:07",
-    "source_path_count": 2,
-    "path_mapping": {
-        "C:\\Users\\bryce\\AppData\\test\\Docker.7z": "D:\\C_backup\\Users\\bryce\\AppData\\test\\Docker.7z",
-        "C:\\Users\\bryce\\AppData\\test\\Docker": "D:\\C_backup\\Users\\bryce\\AppData\\test\\Docker"
-    }
-}
