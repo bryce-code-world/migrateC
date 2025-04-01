@@ -1,5 +1,7 @@
 # C Drive Large File Migration Tool
 
+![Tool Screenshot](./images/screenshot.png)
+
 ## Project Overview
 
 This tool is designed to migrate large folders (over 1GB) from the C drive's Program Files and User/{username}/AppData directories to a target path, and create symbolic links in the original C drive locations. This helps free up disk space on the C drive while ensuring programs continue to function normally through compression, migration, and decompression methods.
@@ -15,12 +17,12 @@ This tool is designed to migrate large folders (over 1GB) from the C drive's Pro
 7. **Graphical Interface**: Intuitive graphical interface with detailed logs and progress information
 8. **Multi-threading**: Automatically optimize thread count to improve execution efficiency
 9. **Path Mapping Records**: Save path mappings before and after migration for easy management and recovery
+10. **Batch File Startup**: Start via batch file for simplified operation
 
 ## System Requirements
 
 - Windows operating system
 - Python 3.6+
-- Administrator privileges (required for creating symbolic links)
 - Sufficient space on the target disk
 
 ## Quick Start
@@ -29,7 +31,8 @@ This tool is designed to migrate large folders (over 1GB) from the C drive's Pro
 
 1. Double-click the `start_migrate_tool.bat` file
 2. The system will automatically request administrator privileges and start the program
-3. If necessary dependencies are missing, the program will install them automatically
+3. The batch file will automatically check the Python environment and necessary dependencies
+4. If necessary dependencies are missing, the program will install them automatically
 
 ### Method 2: Manual Start (Traditional Method)
 
@@ -46,19 +49,6 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
-
-## Creating Executable File
-
-If you want to package the program as a standalone executable file, you can follow these steps:
-
-1. Run the packaging script:
-
-```bash
-python build.py
-```
-
-2. After packaging is complete, the executable file will be located in the `dist/MigrateC` directory
-3. Double-click `MigrateC.exe` to start the program without needing to install Python environment
 
 ## Configuration
 
@@ -109,18 +99,6 @@ performance:
 ```
 
 ## Usage
-
-### Run as Administrator
-
-Since creating symbolic links requires administrator privileges, please run the program as an administrator:
-
-1. Right-click on Command Prompt or PowerShell, select "Run as administrator"
-2. Navigate to the project directory
-3. Run the following command:
-
-```bash
-python main.py
-```
 
 ### Graphical Interface Operation
 

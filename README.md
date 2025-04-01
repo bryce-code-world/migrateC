@@ -49,19 +49,6 @@ pip install -r requirements.txt
 python main.py
 ```
 
-## 打包为可执行文件
-
-如果您希望将程序打包为独立的可执行文件，可以使用以下步骤：
-
-1. 运行打包脚本：
-
-```bash
-python build.py
-```
-
-2. 打包完成后，可执行文件将位于 `dist/MigrateC` 目录下
-3. 双击 `MigrateC.exe` 即可启动程序，无需安装Python环境
-
 ## 配置说明
 
 项目使用`config.yaml`文件进行配置，主要配置项包括：
