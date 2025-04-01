@@ -23,14 +23,42 @@ This tool is designed to migrate large folders (over 1GB) from the C drive's Pro
 - Administrator privileges (required for creating symbolic links)
 - Sufficient space on the target disk
 
-## Installation
+## Quick Start
 
-1. Clone or download this project
-2. Install dependencies:
+### Method 1: Using Batch File (Recommended)
+
+1. Double-click the `start_migrate_tool.bat` file
+2. The system will automatically request administrator privileges and start the program
+3. If necessary dependencies are missing, the program will install them automatically
+
+### Method 2: Manual Start (Traditional Method)
+
+1. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
+
+2. Run Command Prompt or PowerShell as administrator
+3. Navigate to the project directory
+4. Run the following command:
+
+```bash
+python main.py
+```
+
+## Creating Executable File
+
+If you want to package the program as a standalone executable file, you can follow these steps:
+
+1. Run the packaging script:
+
+```bash
+python build.py
+```
+
+2. After packaging is complete, the executable file will be located in the `dist/MigrateC` directory
+3. Double-click `MigrateC.exe` to start the program without needing to install Python environment
 
 ## Configuration
 

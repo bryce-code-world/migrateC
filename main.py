@@ -14,6 +14,7 @@ import yaml
 import json
 import threading
 import multiprocessing
+import platform
 from pathlib import Path
 
 # 调整Python模块导入路径，确保能找到modules模块
