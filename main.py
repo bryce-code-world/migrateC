@@ -15,6 +15,26 @@ import json
 import threading
 import multiprocessing
 from pathlib import Path
+
+# 调整Python模块导入路径，确保能找到modules模块
+def adjust_import_path():
+    """调整Python导入路径，确保能找到modules模块"""
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # 检查当前目录下是否有modules目录（开发环境）
+    if os.path.exists(os.path.join(current_dir, 'modules')):
+        if current_dir not in sys.path:
+            sys.path.insert(0, current_dir)
+    
+    # 检查_internal目录下是否有modules目录（打包环境）
+    internal_dir = os.path.join(current_dir, '_internal')
+    if os.path.exists(os.path.join(internal_dir, 'modules')):
+        if internal_dir not in sys.path:
+            sys.path.insert(0, internal_dir)
+
+# 调整导入路径
+adjust_import_path()
+
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, \
     QPushButton, QTextEdit, QLabel, QProgressBar, QMessageBox, QFileDialog
 from PyQt5.QtCore import Qt, QThread, pyqtSignal, QSize
@@ -435,16 +455,98 @@ class MainWindow(QMainWindow):
     def _open_config(self):
         """打开配置文件"""
         config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.yaml')
-        os.startfile(config_path)
+        
+        # 检查配置文件是否存在，如果不存在则创建默认配置文件
+        if not os.path.exists(config_path):
+            self.log_message(f"配置文件不存在，正在创建默认配置文件: {config_path}")
+            self._create_default_config(config_path)
+            
+        # 打开配置文件
+        try:
+            os.startfile(config_path)
+        except Exception as e:
+            self.logger.exception(f"打开配置文件出错: {str(e)}")
+            QMessageBox.warning(self, "警告", f"无法打开配置文件: {str(e)}\n请手动编辑 {config_path}")
+    
+    def _create_default_config(self, config_path):
+        """创建默认配置文件"""
+        try:
+            default_config = {
+                'scan': {
+                    'scan_paths': [
+                        {
+                            'path': "C:\\Users\\%USERNAME%\\AppData",
+                            'max_depth': 2,
+                            'exclude_folders': []
+                        },
+                        {
+                            'path': "C:\\Program Files",
+                            'max_depth': 1,
+                            'exclude_folders': ["Common Files", "Microsoft", "WindowsApps"]
+                        }
+                    ],
+                    'size_threshold': 1073741824,  # 1GB
+                    'exclude_folders': ["Windows", "System32", "ProgramData", "$Recycle.Bin", "Programs", "Microsoft"],
+                    'output_file': "./output/scan_results.json"
+                },
+                'migration': {
+                    'target_path': "D:\\C_backup",
+                    'temp_path': "./temp",
+                    'mapping_file': "./output/path_mapping.json"
+                },
+                'cleanup': {
+                    'retry_count': 3,
+                    'retry_interval': 5
+                },
+                'link': {
+                    'check_timeout': 10
+                },
+                'logging': {
+                    'log_file': "./logs/migrate.log",
+                    'log_level': "INFO"
+                },
+                'performance': {
+                    'max_threads': 0  # 0表示自动确定
+                }
+            }
+            
+            # 确保目录存在
+            os.makedirs(os.path.dirname(config_path), exist_ok=True)
+            
+            # 写入配置文件
+            with open(config_path, 'w', encoding='utf-8') as f:
+                yaml.dump(default_config, f, default_flow_style=False, allow_unicode=True)
+                
+            self.log_message("已创建默认配置文件")
+            return True
+        except Exception as e:
+            self.logger.exception(f"创建默认配置文件出错: {str(e)}")
+            self.log_message(f"创建默认配置文件出错: {str(e)}")
+            return False
 
 
 if __name__ == "__main__":
-    # 创建应用
-    app = QApplication(sys.argv)
+    # 添加调试信息
+    print("C盘大文件迁移工具 - 主程序启动")
+    print(f"Python版本: {platform.python_version()}")
+    print(f"系统信息: {platform.platform()}")
+    print(f"当前工作目录: {os.getcwd()}")
+    print(f"脚本路径: {os.path.abspath(__file__)}")
+    print(f"命令行参数: {sys.argv}")
+    print(f"是否从启动器启动: {'MIGRATE_C_LAUNCHER' in os.environ}")
+    
+    # 确保只有一个QApplication实例
+    app = QApplication.instance()
+    if not app:
+        app = QApplication(sys.argv)
     
     # 创建主窗口
     window = MainWindow()
     window.show()
+    
+    # 确保窗口显示在前台
+    window.raise_()
+    window.activateWindow()
     
     # 运行应用
     sys.exit(app.exec_())

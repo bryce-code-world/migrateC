@@ -87,6 +87,16 @@ class Migrator:
             if not scan_result:
                 self.resource_monitor.stop_monitoring()
                 return False
+                
+            # 检查目标磁盘空间是否足够
+            if not self._check_disk_space(scan_result):
+                self.resource_monitor.stop_monitoring()
+                return False
+            
+            # 检查目标磁盘空间是否足够
+            if not self._check_disk_space(scan_result):
+                self.resource_monitor.stop_monitoring()
+                return False
             
             # 获取大文件夹列表
             large_folders = scan_result.get('large_folders', [])
@@ -687,6 +697,65 @@ class Migrator:
         else:
             hours = seconds / 3600
             return f"{hours:.1f}小时"
+            
+    def _check_disk_space(self, scan_result):
+        """
+        检查目标磁盘是否有足够的空间
+        
+        Args:
+            scan_result: 扫描结果
+            
+        Returns:
+            bool: 是否有足够的空间
+        """
+        try:
+            # 导入psutil库检查磁盘空间
+            import psutil
+            
+            # 计算需要迁移的文件总大小
+            total_size = 0
+            
+            # 计算大文件夹的总大小
+            for folder_info in scan_result.get('large_folders', []):
+                total_size += folder_info.get('size', 0)
+                
+            # 计算大文件的总大小
+            for file_info in scan_result.get('large_files', []):
+                total_size += file_info.get('size', 0)
+                
+            # 获取目标磁盘的可用空间
+            # 从目标路径中提取盘符
+            target_drive = os.path.splitdrive(self.target_path)[0]
+            if not target_drive:
+                # 如果目标路径没有盘符（例如是相对路径），则使用当前工作目录的盘符
+                target_drive = os.path.splitdrive(os.getcwd())[0]
+                
+            # 获取磁盘使用情况
+            disk_usage = psutil.disk_usage(target_drive)
+            free_space = disk_usage.free
+            
+            # 考虑压缩率，假设平均压缩率为0.7（即压缩后大小为原大小的70%）
+            # 同时为了安全，额外预留20%的空间
+            required_space = total_size * 0.7 * 1.2
+            
+            # 检查空间是否足够
+            if free_space < required_space:
+                self._update(f"目标磁盘空间不足！需要至少 {self._format_size(required_space)}，但只有 {self._format_size(free_space)}。", "空间检查")
+                self._update(f"请清理目标磁盘 {target_drive} 后重试，或者更改配置中的目标路径。", "空间检查")
+                return False
+            else:
+                self._update(f"目标磁盘空间充足：需要 {self._format_size(required_space)}，可用 {self._format_size(free_space)}。", "空间检查")
+                return True
+                
+        except ImportError:
+            self.logger.warning("psutil模块未安装，无法检查磁盘空间")
+            self._update("警告：无法检查目标磁盘空间是否足够，请确保目标磁盘有足够空间", "空间检查")
+            return True  # 如果无法检查，则假设空间足够
+            
+        except Exception as e:
+            self.logger.exception(f"检查磁盘空间时出错: {str(e)}")
+            self._update(f"检查磁盘空间时出错: {str(e)}，请确保目标磁盘有足够空间", "空间检查")
+            return True  # 如果检查出错，则假设空间足够
     
     def _update(self, message, operation_type=None):
         """
