@@ -4,15 +4,15 @@
 scan:
   # 需要扫描的目录路径列表及其对应的扫描层级
   scan_paths:
-    # - path: "C:\\Users\\%USERNAME%\\AppData"
-    #   max_depth: 2          # 该路径下查询的文件夹深度
-    #   exclude_folders: []   # 该路径下特定需要排除的文件夹名称列表
-    # - path: "C:\\Program Files"
-    #   max_depth: 1
-    #   exclude_folders: ["Common Files", "Microsoft", "WindowsApps"]
-    - path: "C:\\Users\\%USERNAME%\\AppData\\test"
-      max_depth: 1          # 该路径下查询的文件夹深度
+    - path: "C:\\Users\\%USERNAME%\\AppData"
+      max_depth: 2          # 该路径下查询的文件夹深度
       exclude_folders: []   # 该路径下特定需要排除的文件夹名称列表
+    - path: "C:\\Program Files"
+      max_depth: 1
+      exclude_folders: ["Common Files", "Microsoft", "WindowsApps"]
+    # - path: "C:\\Users\\%USERNAME%\\AppData\\test"
+    #   max_depth: 1          # 该路径下查询的文件夹深度
+    #   exclude_folders: []   # 该路径下特定需要排除的文件夹名称列表
   # 文件大小阈值（单位：字节，1GB = 1073741824字节）
   size_threshold: 1073741824
   # 全局排除的文件夹名称列表，这些文件夹将在所有路径下被跳过不进行迁移

@@ -153,7 +153,7 @@ class Scanner:
                        f"合并后的排除列表: {exclude_folders}")
             
             # 使用os.walk的topdown参数，以便我们可以控制递归深度
-            for root, dirs, files in os.walk(directory, topdown=True):
+            for root, dirs, files in os.walk(directory, topdown=True, followlinks=False):
                 if not self.is_running:
                     return
                 
@@ -180,6 +180,11 @@ class Scanner:
                     file_path = os.path.join(root, file_name)
                     
                     try:
+                        # 检查是否为软连接，如果是则跳过
+                        if os.path.islink(file_path):
+                            self.logger.debug(f"跳过软连接文件: {file_path}")
+                            continue
+                        
                         # 获取文件大小
                         file_size = os.path.getsize(file_path)
                         
@@ -206,6 +211,11 @@ class Scanner:
                         return
                     
                     dir_path = os.path.join(root, dir_name)
+                    
+                    # 检查是否为软连接目录，如果是则跳过
+                    if os.path.islink(dir_path):
+                        self.logger.debug(f"跳过软连接目录: {dir_path}")
+                        continue
                     
                     # 如果文件夹名称在排除列表中，跳过该文件夹
                     if dir_name in exclude_folders:
@@ -261,10 +271,13 @@ class Scanner:
             int: 文件夹大小（字节）
         """
         total_size = 0
-        for root, dirs, files in os.walk(folder_path):
+        for root, dirs, files in os.walk(folder_path, followlinks=False):
             for file in files:
                 try:
                     file_path = os.path.join(root, file)
+                    # 跳过软连接文件
+                    if os.path.islink(file_path):
+                        continue
                     total_size += os.path.getsize(file_path)
                 except Exception as e:
                     self.logger.debug(f"获取文件大小出错: {file_path}, {str(e)}")
