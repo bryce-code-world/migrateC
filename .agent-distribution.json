@@ -1,0 +1,21 @@
+{
+  "managed": {
+    ".python-version": "26633362ccda204adac75cee2d28d2a6a49f072ca56b621cd99d0c9c18e2ea07",
+    "config.yaml": "ea3bd824680b4f897287a91bcf1f4ba7c0465fe2dba53e025bfd2553341c667c",
+    "images/screenshot.png": "c5484116d1195e511ed7d5ca24d3db2250bb0d64a398521ee7d9ff9e4a468368",
+    "main.py": "3d488b9b0c0f3bb3d5282323b65e4fe42140b77afbac88ad1f909e79db2aa0f7",
+    "modules/__init__.py": "7fb1ae5396353733b5dc6b5baa0b14591237d44f5d4ffe80a4a25f61646b1ea5",
+    "modules/cleaner.py": "1c256c32fc997dcd208bd2e5d160d0dfaed73c8b79f75645057df99de21fb28a",
+    "modules/linker.py": "fba5de3063270946a6f2d0be2ad2825ca1b1f4fc0c34160a2d86370520a5c62a",
+    "modules/migrator.py": "919e35055a5a26515ca722aeef7e449ffb8d6326f7104c74c2294bc72bde72cf",
+    "modules/resource_monitor.py": "2242628a377e149c13acf97d056ce9ca3eba3b171b52f7572f5201ce437bf2e7",
+    "modules/scanner.py": "d426f612461b65da11d279abc0208f66a241edea525b0fe338fa3650d40a3f9c",
+    "modules/utils.py": "3b02aec56300ef2edca3c97cec38b7033b3fe041d56eb7f91aea5aa4b2cbc8f3",
+    "prompt.md": "d310215f991c39a470552c93ac09fa9e46331d5050363b044c17c4a8474f25c4",
+    "requirements.txt": "14cae8fd9810072d5331074369b04cadb920ee1fe5078fb7b32733022f596eb2",
+    "start_migrate_tool.bat": "96de99d19253def9c33d06b3940687d95cecb442a9eae9e4212237506b3dc4e2"
+  },
+  "source": "scripts/python/migrateC",
+  "source_commit": "27064458f0b6d5a2cceca672634335c1db650627",
+  "version": 1
+}
